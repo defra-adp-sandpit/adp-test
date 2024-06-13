@@ -1,0 +1,10 @@
+services:
+  ? adp-test
+  : build:
+      context: .
+      target: production
+    image: adp-test
+    container_name: adp-test
+    environment:
+      APPINSIGHTS_CONNECTIONSTRING: ${APPINSIGHTS_CONNECTIONSTRING}
+      APPINSIGHTS_CLOUDROLE: adp-test-local

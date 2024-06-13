@@ -1,0 +1,32 @@
+@Adp.Test.Api_HostAddress = https://localhost:7118
+
+GET {{Adp.Test.Api_HostAddress}}/api/demo
+
+###
+
+POST {{Adp.Test.Api_HostAddress}}/api/demo
+Content-Type: application/json
+
+{
+    "name":"item3"
+}
+
+###
+
+PATCH {{Adp.Test.Api_HostAddress}}/api/demo
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name":"item3"
+}
+
+###
+
+GET {{Adp.Test.Api_HostAddress}}/api/demo/1
+
+###
+
+DELETE {{Adp.Test.Api_HostAddress}}/api/demo/3
+
+###
